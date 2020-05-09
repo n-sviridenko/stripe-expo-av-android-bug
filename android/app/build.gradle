@@ -74,6 +74,10 @@ android {
   }
   packagingOptions {
     pickFirst "**"
+    // https://github.com/stripe/stripe-android/issues/2460#issuecomment-626025632
+    exclude '/META-INF/CERT.SF'
+    exclude '/META-INF/MANIFEST.MF'
+    exclude '/META-INF/CERT.RSA'
   }
 }
 
