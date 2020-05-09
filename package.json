@@ -1,6 +1,7 @@
 {
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
+    "postinstall": "npx jetify",
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
@@ -15,7 +16,8 @@
     "react-dom": "~16.9.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-36.0.1.tar.gz",
     "react-native-unimodules": "^0.7.0",
-    "react-native-web": "~0.11.7"
+    "react-native-web": "~0.11.7",
+    "tipsi-stripe": "tipsi/tipsi-stripe#926fddf85329caa52414cbc21924cd29f6c684a9"
   },
   "devDependencies": {
     "babel-preset-expo": "~8.0.0"

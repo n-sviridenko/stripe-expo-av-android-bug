@@ -186,6 +186,7 @@ dependencies {
   api 'com.facebook.react:react-native:33.0.0'
   
 
+  implementation project(':tipsi-stripe')
 
   
   addUnimodulesDependencies([
