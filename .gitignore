@@ -12,3 +12,18 @@ web-report/
 
 # macOS
 .DS_Store
+
+
+android/local.properties
+android/.gradle
+android/build
+android/app/build
+android/app/release
+android/app/app.iml
+android/android.iml
+
+ios/lightpass3.xcodeproj/xcshareddata
+ios/lightpass3.xcodeproj/xcuserdata
+ios/lightpass3.xcworkspace/xcshareddata
+ios/lightpass3.xcworkspace/xcuserdata
+ios/Pods
