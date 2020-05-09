@@ -185,6 +185,10 @@ dependencies {
   
 
   implementation project(':tipsi-stripe')
+  // https://github.com/expo/expo/issues/5688#issuecomment-535069727
+  implementation 'org.bouncycastle:bcprov-jdk15on:1.61'
+  // fails the build
+  // implementation 'com.nimbusds:nimbus-jose-jwt:7.8'
 
   
   addUnimodulesDependencies([
