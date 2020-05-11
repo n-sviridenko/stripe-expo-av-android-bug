@@ -74,6 +74,10 @@ android {
   }
   packagingOptions {
     pickFirst "**"
+    // https://github.com/stripe/stripe-android/issues/2460#issuecomment-626025632
+    exclude '/META-INF/CERT.SF'
+    exclude '/META-INF/MANIFEST.MF'
+    exclude '/META-INF/CERT.RSA'
   }
 }
 
@@ -127,8 +131,6 @@ dependencies {
   implementation 'com.google.android.gms:play-services-maps:15.0.1'
   implementation 'com.google.android.gms:play-services-auth:15.0.1'
   implementation 'com.google.android.gms:play-services-location:15.0.1'
-  implementation "com.madgag.spongycastle:core:1.53.0.0"
-  implementation "com.madgag.spongycastle:prov:1.53.0.0"
   debugImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta1'
   // debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.4-beta1'
   releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta1'
@@ -186,6 +188,11 @@ dependencies {
   api 'com.facebook.react:react-native:33.0.0'
   
 
+  implementation project(':tipsi-stripe')
+  // https://github.com/expo/expo/issues/5688#issuecomment-535069727
+  implementation 'org.bouncycastle:bcprov-jdk15on:1.61'
+  // fails the build
+  // implementation 'com.nimbusds:nimbus-jose-jwt:7.8'
 
   
   addUnimodulesDependencies([
